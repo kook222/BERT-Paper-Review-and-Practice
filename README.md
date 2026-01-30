@@ -68,11 +68,7 @@
 본 프로젝트의 실험 코드를 실행하기 위한 가이드입니다.
 
 ### 1. Install Dependencies
-필요한 라이브러리를 설치합니다.
-```bash
-pip install torch transformers datasets scikit-learn matplotlib pandas
+필요한 라이브러리를 설치합니다. `requirements.txt`를 이용하면 한 번에 설치할 수 있습니다.
 
-## 🔗 References
-* **Original Paper:** [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
-* **Dataset:** [IMDb Movie Reviews Dataset](https://huggingface.co/datasets/imdb)
-* **Library:** [Hugging Face Transformers](https://github.com/huggingface/transformers)
+```bash
+pip install -r requirements.txt
