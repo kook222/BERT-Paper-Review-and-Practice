@@ -1,0 +1,8 @@
+bert_final_model/
+bert_large_result/
+bert_result/
+gpt_result/
+*.parquet
+__pycache__/
+*.pt
+*.bin
