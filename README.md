@@ -48,7 +48,16 @@
   <img src="final_comparison.png" width="80%">
 </p>
 
-### 3. Analysis
+### 3. Quantitative Results (Accuracy)
+| Model | Epoch 1 | Epoch 2 | Epoch 3 (Final) |
+| :--- | :---: | :---: | :---: |
+| **OpenAI GPT** | 87.9% | 87.9% | 89.1% |
+| **BERT-Base** | 87.8% | 88.5% | 88.8% |
+| **BERT-Large** | **88.8%** | **90.1%** | **89.9%** |
+
+* **Observation:** BERT-Large 모델이 가장 높은 성능을 보였으나, 3 Epoch에서 과적합(Overfitting)으로 인해 성능이 소폭 하락함.
+
+### 4. Analysis
 * **BERT의 승리:** 동일한 파라미터 수(110M)를 가진 `BERT-Base`가 `OpenAI GPT`보다 높은 성능을 기록했습니다. 이는 감성 분석 태스크에서 **양방향 문맥 파악**이 얼마나 중요한지를 증명합니다.
 * **Size Matters:** 모델 크기를 키운 `BERT-Large`는 압도적인 성능(약 89.9%)을 보여주었습니다.
 * **Overfitting 이슈:** `BERT-Large`의 경우 3 Epoch에서 성능이 소폭 하락했는데, 이는 모델이 너무 강력하여 학습 데이터에 과적합(Overfitting)되기 시작했음을 시사합니다. (논문 권장 Epoch: 2~4회)
@@ -62,3 +71,8 @@
 필요한 라이브러리를 설치합니다.
 ```bash
 pip install torch transformers datasets scikit-learn matplotlib pandas
+
+## 🔗 References
+* **Original Paper:** [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+* **Dataset:** [IMDb Movie Reviews Dataset](https://huggingface.co/datasets/imdb)
+* **Library:** [Hugging Face Transformers](https://github.com/huggingface/transformers)
