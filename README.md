@@ -72,3 +72,66 @@
 
 ```bash
 pip install -r requirements.txt
+
+```
+
+### 2. Run Experiments
+
+학습 스크립트를 실행하여 모델 간 성능을 비교할 수 있습니다. `argparse`를 통해 모델 타입과 하이퍼파라미터를 조정할 수 있습니다.
+
+**A. Train BERT-Base**
+
+```bash
+python train.py --model_name bert-base-uncased --batch_size 32 --epochs 3
+
+```
+
+**B. Train OpenAI-GPT**
+
+```bash
+python train.py --model_name openai-gpt --batch_size 32 --epochs 3
+
+```
+
+### 3. Visualization
+
+학습이 완료되면 로그를 바탕으로 Accuracy 그래프를 생성합니다. 결과 이미지는 `./plots/` 디렉토리에 저장됩니다.
+
+```bash
+python plot_results.py --log_dir ./logs
+
+```
+
+## 📂 Project Structure
+
+이 프로젝트의 디렉토리 구조는 다음과 같습니다.
+
+```bash
+.
+├── data/                  # IMDb Dataset storage
+├── models/                # Model architecture wrappers (BERT, GPT)
+├── plots/                 # Generated result graphs
+├── train.py               # Main training script
+├── plot_results.py        # Visualization script
+├── requirements.txt       # Dependencies
+└── README.md              # Project documentation
+
+```
+
+## 🛠 Tech Stack
+
+* **Language:** Python 3.8+
+* **Framework:** PyTorch, Hugging Face Transformers
+* **Visualization:** Matplotlib, Seaborn
+
+## 🔗 References
+
+* [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+* [Improving Language Understanding by Generative Pre-Training (GPT)](https://www.google.com/search?q=https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+* [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers/index)
+
+---
+
+<p align="center">
+Created by <a href="[https://github.com/kook222](https://www.google.com/search?q=https://github.com/kook222)">kook222</a> | Based on BERT Paper Implementation Study
+</p>
